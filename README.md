@@ -1,50 +1,36 @@
-# PokeDex — Despliegue en la Nube
+# Pokédex Angular
 
-## ¿Qué es esto?
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![codecov](https://codecov.io/gh/keilermora/pokedex-angular/branch/master/graph/badge.svg?token=9E0D28IOFT)](https://codecov.io/gh/keilermora/pokedex-angular)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-Es una aplicación web que te permite explorar diferentes Pokémon, ver su información, habilidades y características. El código fue desarrollado por PumasLab y mi trabajo fue desplegarlo en la nube de forma segura.
+[https://keilermora.github.io/pokedex-angular/](https://keilermora.github.io/pokedex-angular/)
 
-- **Repositorio:** https://github.com/victordmarrugo/pokedex
-- **App en vivo:** https://polite-ground-0d1b20a0f.7.azurestaticapps.net
+La aplicación muestra el listado y el detalle de los Pokémon de las primeras 3 generaciones.
 
----
+La imagen que representa un Pokémon en el listado muestra las variaciones que estos tuvieron durante las primeras versiones, desde la versión Green (1996) hasta la version Emerald (2005).
 
-## Cómo creé la cuenta en Azure
+Los detalles de un Pokémon individual muestra sus estadísticas base y los registros de la Pokédex de las diferentes versiones.
 
-Esto lo hice el viernes 18 de abril en clase. Nunca había usado Azure antes así que fue todo nuevo para mí.
+El proyecto fue desarrollado usando la librería de JavaScript [Angular](https://angular.io/) para crear la interfaz de usuario, en comunicación con la Api RESTful [PokéAPI](https://pokeapi.co/).
 
-1. Entré a [https://azure.microsoft.com](https://azure.microsoft.com) y le di clic a **"Iniciar gratis"**
-2. Inicié sesión con mi cuenta personal de Microsoft
-3. Llené el formulario con mis datos: nombre, país, número de teléfono
-4. Me pidió una tarjeta de crédito para verificar identidad, pero aclara que no cobra nada en el plan gratuito
-5. Acepté los términos y me llegó un correo de confirmación
-6. Entré a [https://portal.azure.com](https://portal.azure.com) y ya tenía acceso
+## Requisitos mínimos
 
-Fue más sencillo de lo que esperaba, aunque el portal al principio se ve bastante abrumador porque tiene muchísimas opciones.
+- [Nodejs](https://nodejs.org) con soporte de largo plazo (LTS).
+- Un navegador web
 
----
+## Ambiente de pruebas
 
-## Reflexión personal
+Ejecutar en la raíz del proyecto:
 
-### ¿Para qué sirven los encabezados de seguridad que configuré?
+```
+npm start
+```
 
-Antes de este proyecto honestamente no sabía que existían. Son instrucciones que el servidor le manda al navegador para decirle cómo comportarse:
+## Referencias
 
-- **Content-Security-Policy** — le dice al navegador de dónde puede cargar cosas. Evita que alguien inyecte código malicioso en la página.
-- **Strict-Transport-Security** — obliga a que la conexión siempre sea HTTPS y no HTTP.
-- **X-Content-Type-Options** — evita que el navegador "adivine" qué tipo de archivo es algo, lo cual puede ser peligroso.
-- **X-Frame-Options** — impide que alguien meta tu página dentro de otra en un iframe, una técnica de ataque bastante conocida.
-- **Referrer-Policy** — controla qué información se comparte cuando alguien hace clic en un enlace de tu app.
-- **Permissions-Policy** — bloquea acceso a cámara, micrófono y ubicación. La PokeDex no necesita nada de eso.
-
-### ¿Qué aprendí?
-
-Que desplegar una app no es solo subirla y ya. Hay que pensar en cómo está configurada y qué tan expuesta queda. Con un solo archivo de configuración pude pasar de una app sin protección a una con calificación A en seguridad. Eso me pareció bastante poderoso para ser algo tan simple de hacer.
-
-### Los problemas que tuve
-
-Fueron varios y me quitaron bastante tiempo, pero los fui resolviendo. Los detallo paso a paso en `Despliegue.md`.
-
----
-
-*Víctor D. Marrugo — Abril 2026*
+- [Angular](https://angular.io/): One framework.
+- [Angular Folder Structure](https://angular-folder-structure.readthedocs.io/en/latest/): Create a skeleton structure which is flexible for projects big or small.
+- [Font Awesome](https://fontawesome.com/): The web's most popular icon set and toolkit.
+- [Normalize.css](https://necolas.github.io/normalize.css/): A modern, HTML5-ready alternative to CSS resets.
+- [PokéAPI](https://pokeapi.co/): The RESTful Pokémon API.
