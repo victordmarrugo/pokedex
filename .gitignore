@@ -1,0 +1,16 @@
+# Dependencias
+node_modules/
+
+# Build compilado (no va al repo)
+dist/
+
+# Caché de Angular
+.angular/
+
+# Variables de entorno locales
+.env
+*.env
+
+# Archivos de sistema Windows
+Thumbs.db
+desktop.ini
