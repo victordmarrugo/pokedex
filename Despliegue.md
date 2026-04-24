@@ -206,4 +206,18 @@ Se escaneó la app en [https://securityheaders.com](https://securityheaders.com)
 
 ---
 
+## Desafío Maestro — Dominio Personalizado con DuckDNS
+
+Como parte del desafío opcional, configuré un dominio personalizado gratuito usando DuckDNS.
+
+1. Entré a [https://www.duckdns.org](https://www.duckdns.org) e inicié sesión con GitHub
+2. Creé el subdominio `victorporkedex`
+3. Apunté la IP del servidor de Azure (`132.220.38.112`) al dominio
+
+**Dominio configurado:** http://victorporkedex.duckdns.org
+
+El plan gratuito de Azure Static Web Apps no permite asociar dominios personalizados externos desde el portal, por lo que aunque el dominio apunta correctamente a la IP del servidor, Azure no redirige las peticiones al no reconocer el host. Para que funcione completamente se requeriría el plan de pago de Azure o un servidor propio. De todas formas el proceso de configuración del DNS quedó completado y documentado.
+
+---
+
 *Víctor D. Marrugo — Abril 2026*
